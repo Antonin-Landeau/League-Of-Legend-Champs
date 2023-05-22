@@ -1,0 +1,27 @@
+h1 {
+  font-family: "BeaufortforLOL-Bold";
+  display: flex;
+  flex-direction: column;
+  font-size: 5vw;
+  text-transform: uppercase;
+  font-style: italic;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  clip-path: polygon(100% 0, 0 100%, 0 100%, 100% 0);
+  animation: fadin ease-in .7s forwards;
+}
+
+h1 span:nth-child(2) {
+  font-size: 15vw;
+}
+
+@keyframes fadin {
+  from {
+    clip-path: polygon(100% 0, 0 100%, 0 100%, 100% 0);
+  }
+
+  to {
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+  }
+}

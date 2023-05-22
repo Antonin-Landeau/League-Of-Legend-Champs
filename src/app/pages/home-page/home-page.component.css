@@ -1,0 +1,33 @@
+.hero {
+  width: 100%;
+  margin-top: 80px;
+  height: calc(100vh - 80px);
+  overflow: hidden;
+  position: relative;
+}
+
+.video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.199);
+  z-index: 10;
+  position: absolute;
+  top: 0;
+}
+
+
+
+
+.title-wrapper {
+  position: absolute;
+  z-index: 20;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

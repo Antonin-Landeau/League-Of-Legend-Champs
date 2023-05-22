@@ -1,0 +1,6 @@
+<div class="wrapper" (click)="handleClick()">
+  <div class="border"></div>
+  <div class="button" [class.s]="size === 's'" [class.xl]="size === 'xl'">
+    {{ label }}
+  </div>
+</div>

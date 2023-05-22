@@ -1,0 +1,88 @@
+<div class="dropdown-container">
+  <div class="selected-field-container">
+    <div (click)="handleOpen()" *ngIf="!selectedValue" class="selected-field">
+      {{ title }}
+    </div>
+    <div
+      (click)="handleOpen()"
+      *ngIf="selectedValue && type === 'string'"
+      class="selected-field"
+    >
+      <div>
+        {{ selectedValue }}
+      </div>
+      <svg
+        class="cross"
+        (click)="clearValues()"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path
+          clip-rule="evenodd"
+          fill-rule="evenodd"
+          d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-1.72 6.97a.75.75 0 10-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 101.06 1.06L12 13.06l1.72 1.72a.75.75 0 101.06-1.06L13.06 12l1.72-1.72a.75.75 0 10-1.06-1.06L12 10.94l-1.72-1.72z"
+        ></path>
+      </svg>
+    </div>
+    <div
+      (click)="handleOpen()"
+      *ngIf="selectedValue && type === 'difficulties'"
+      class="selected-field"
+    >
+      <app-difficulty-icon
+        [value]="selectedValue"
+        class="selected-difficulty-container"
+      >
+      </app-difficulty-icon>
+      <svg
+        class="cross"
+        (click)="clearValues()"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path
+          clip-rule="evenodd"
+          fill-rule="evenodd"
+          d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-1.72 6.97a.75.75 0 10-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 101.06 1.06L12 13.06l1.72 1.72a.75.75 0 101.06-1.06L13.06 12l1.72-1.72a.75.75 0 10-1.06-1.06L12 10.94l-1.72-1.72z"
+        ></path>
+      </svg>
+    </div>
+    <svg
+      [class.open]="isOpen"
+      class="chevron"
+      (click)="handleOpen()"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path
+        clip-rule="evenodd"
+        fill-rule="evenodd"
+        d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
+      ></path>
+    </svg>
+  </div>
+  <div class="options-container" *ngIf="isOpen">
+    <div class="option-item" *ngFor="let value of values">
+      <div
+        class="option-item-string"
+        *ngIf="type === 'string'"
+        (click)="updateValue(value)"
+      >
+        {{ value }}
+      </div>
+      <div
+        *ngIf="type === 'difficulties'"
+        class="option-item-difficulties"
+        (click)="updateValue(value)"
+      >
+        <app-difficulty-icon [value]="value"> </app-difficulty-icon>
+      </div>
+    </div>
+  </div>
+</div>

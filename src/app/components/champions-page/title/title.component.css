@@ -1,0 +1,33 @@
+h1 {
+  font-family: "BeaufortforLOL-Bold";
+  display: flex;
+  flex-direction: column;
+  font-size: 5vw;
+  text-transform: uppercase;
+  font-style: italic;
+  text-align: center;
+  clip-path: polygon(100% 0, 0 100%, 0 100%, 100% 0);
+  animation: fadin ease-in 0.7s forwards;
+}
+
+h1 span:nth-child(2) {
+  font-size: 15vw;
+}
+
+.title-container p {
+  text-align: center;
+  font-size: 12px;
+  text-justify: distribute;
+  max-width: 390px;
+  margin: 20px auto 0 auto;
+}
+
+@keyframes fadin {
+  from {
+    clip-path: polygon(100% 0, 0 100%, 0 100%, 100% 0);
+  }
+
+  to {
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+  }
+}

@@ -1,0 +1,29 @@
+.role-difficulty-container {
+  padding: 50px 20px 20px 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.text {
+  color: #f0ae30;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.title {
+  color: white;
+}
+
+.text-container {
+  padding: 10px;
+}
+
+.role-icon {
+  margin: 0 auto;
+}

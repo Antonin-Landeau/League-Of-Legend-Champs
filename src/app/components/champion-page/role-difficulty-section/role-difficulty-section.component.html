@@ -1,0 +1,38 @@
+<div class="role-difficulty-container">
+  <div class="column">
+    <app-role-icon
+      [role]="role[0].toLowerCase()"
+      class="role-icon"
+    ></app-role-icon>
+    <div class="text-container">
+      <div class="title text">Role</div>
+
+      <div class="text">{{ role[0] }}</div>
+    </div>
+  </div>
+
+  <div class="column">
+    <app-difficulty-icon
+      class="difficulty-icon"
+      *ngIf="difficulty <= 4"
+      value="1"
+    ></app-difficulty-icon>
+    <app-difficulty-icon
+      class="difficulty-icon"
+      *ngIf="difficulty > 4 && difficulty <= 7"
+      value="2"
+    ></app-difficulty-icon>
+    <app-difficulty-icon
+      class="difficulty-icon"
+      *ngIf="difficulty > 7"
+      value="3"
+    ></app-difficulty-icon>
+
+    <div class="difficulty-text">
+      <div class="title text">Difficulty</div>
+      <div *ngIf="difficulty <= 4" class="text">Low</div>
+      <div *ngIf="difficulty > 4 && difficulty <= 7" class="text">Moderate</div>
+      <div *ngIf="difficulty > 7" class="text">High</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+.search-input input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: none;
+  margin-left: 8px;
+  color: rgb(62, 62, 62);
+}
+.search-input svg {
+  display: block;
+  height: fit-content;
+  width: 30px;
+  height: 30px;
+  stroke: #f0ae30;
+}
+
+.search-input {
+  display: flex;
+  align-items: center;
+  background: rgb(229, 229, 229);
+  border-radius: 10px;
+  padding: 5px;
+  margin: 20px 0;
+}
+.dropdown-container {
+  display: flex;
+  width: 100%;
+}
+
+.dropdown {
+  width: 100%;
+}

@@ -1,0 +1,120 @@
+.header {
+  position: fixed;
+  background-color: #111;
+  top: 0;
+  width: 100%;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  gap: 20px;
+  z-index: 90;
+}
+
+.logo-container svg {
+  display: block;
+  fill: white;
+}
+.logo-container {
+  height: fit-content;
+}
+
+.burger-icon,
+.cross {
+  background-color: #404040;
+  width: 45px;
+  height: 45px;
+  border-radius: 15px;
+  margin-left: auto;
+}
+
+.burger-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cross {
+  position: relative;
+}
+
+.cross div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.cross div:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.cross div:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.burger-icon div,
+.burger-icon div::after,
+.burger-icon div::before,
+.cross div {
+  width: 18px;
+  height: 2px;
+  background: #fff;
+}
+
+.burger-icon div {
+  position: relative;
+}
+
+.burger-icon div::after,
+.burger-icon div::before {
+  position: absolute;
+  content: "";
+}
+.burger-icon div::after {
+  transform: translateY(5px);
+}
+.burger-icon div::before {
+  transform: translateY(-5px);
+}
+
+.menu {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  background-color: #1f1f1f;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  transition: all 1s ease;
+}
+
+.menu-header {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.open {
+  left: 0%;
+}
+
+.link-list {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  list-style-type: none;
+  padding: 20px;
+}
+
+.link-item a {
+  text-decoration: none;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.link-item {
+  margin: 15px 0;
+}

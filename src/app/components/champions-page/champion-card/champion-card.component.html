@@ -1,0 +1,15 @@
+<a *ngIf="champion" [routerLink]="['/champion', champion.id]" class="card">
+  <div class="img-container">
+    <img
+      [src]="
+        'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/' +
+        champion.id +
+        '_0.jpg'
+      "
+      alt=""
+    />
+  </div>
+  <div class="name">
+    {{ champion.name }}
+  </div>
+</a>

@@ -1,0 +1,15 @@
+<div class="hero">
+  <video [muted]="'muted'" autoplay loop class="video">
+    <source src="/assets/welcome-video.mp4" />
+  </video>
+  <div class="overlay"></div>
+  <div class="title-wrapper">
+    <app-home-page-title></app-home-page-title>
+    <app-button
+      label="choose your champion"
+      size="xl"
+      class="button"
+      (onClick)="navigate($event)"
+    ></app-button>
+  </div>
+</div>
