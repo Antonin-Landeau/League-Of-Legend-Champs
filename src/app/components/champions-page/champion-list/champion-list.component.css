@@ -3,4 +3,27 @@
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   padding-top: 32px;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .card-container {
+    max-width: 800px;
+
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card-container {
+    max-width: 1350px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (min-width: 1250px) {
+  .card-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }

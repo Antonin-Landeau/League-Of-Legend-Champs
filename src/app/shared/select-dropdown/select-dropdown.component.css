@@ -17,6 +17,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 
 .chevron {
@@ -51,6 +52,12 @@
 
 .option-item-string {
   padding: 10px 15px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.option-item-string:hover {
+  background-color: rgb(0, 160, 186);
 }
 
 .open {
@@ -58,9 +65,14 @@
 }
 
 .option-item-difficulties {
+  cursor: pointer;
+  transition: all 0.1s ease;
   padding: 15px 30px;
 }
 
+.option-item-difficulties:hover {
+  background-color: rgb(0, 160, 186);
+}
 .selected-difficulty-container {
   width: 100%;
 }

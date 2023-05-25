@@ -2,7 +2,7 @@ h1 {
   font-family: "BeaufortforLOL-Bold";
   display: flex;
   flex-direction: column;
-  font-size: 5vw;
+  font-size: calc(24px + 0.5vw);
   text-transform: uppercase;
   font-style: italic;
   text-align: center;
@@ -11,7 +11,7 @@ h1 {
 }
 
 h1 span:nth-child(2) {
-  font-size: 15vw;
+  font-size: calc(50px + 2vw);
 }
 
 .title-container p {
@@ -20,6 +20,10 @@ h1 span:nth-child(2) {
   text-justify: distribute;
   max-width: 390px;
   margin: 20px auto 0 auto;
+}
+
+.title-container {
+  margin: 0 auto;
 }
 
 @keyframes fadin {

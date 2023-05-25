@@ -12,7 +12,7 @@
       ></path>
     </svg>
   </div>
-  <div class="logo-container">
+  <a class="logo-container" routerLink="/">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       class="league"
@@ -89,7 +89,13 @@
         </clippath>
       </defs>
     </svg>
-  </div>
+  </a>
+  <nav>
+    <a routerLink="/champions" class="link">
+      <div class="link-label">Champions</div>
+      <div class="link-border"></div
+    ></a>
+  </nav>
 
   <div class="burger-icon" (click)="onOpenMenu()">
     <div></div>
