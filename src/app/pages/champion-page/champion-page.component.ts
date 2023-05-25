@@ -25,7 +25,6 @@ export class ChampionPageComponent implements OnInit {
   }
 
   fetchChampion(championId: string) {
-    console.log(championId);
     this.championsService.getChampion(championId).subscribe(
       (response) => {
         console.log(Object.values(response.data)[0]);

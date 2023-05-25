@@ -1,22 +1,22 @@
 <div class="page-conatiner">
-  <section class="header">
+  <section
+    class="header"
+    [style]="
+      '--url: url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/' +
+      champion.id +
+      '_0.jpg);'
+    "
+  >
     <app-button
       class="go-back"
       label="retour"
       size="s"
       (click)="goBack()"
     ></app-button>
-    <img
-      class="background-img"
-      [src]="
-        'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/' +
-        champion.id +
-        '_0.jpg'
-      "
-      alt=""
-    />
+
     <div class="description">
       <img
+        class="main-img"
         [src]="
           'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/' +
           champion.id +
@@ -24,30 +24,31 @@
         "
         alt=""
       />
-      <div class="description-infos">
-        <div class="description-infos-title">
-          <span>{{ champion.title }}</span>
-          <h1>{{ champion.name }}</h1>
-        </div>
-        <svg
-          class="border"
-          viewBox="0 0 530 716"
-          fill="none"
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect x="0.5" y="0.5" stroke="#B0B0B0" />
-        </svg>
-
-        <app-role-difficulty-section
-          [difficulty]="champion.info.difficulty"
-          [role]="champion.tags"
-        ></app-role-difficulty-section>
-        <div class="separator"></div>
-        <p class="lore">
-          {{ champion.lore }}
-        </p>
-      </div>
     </div>
+  </section>
+  <section class="description-infos">
+    <div class="little-title">Overview</div>
+    <div class="description-infos-title">
+      <span>{{ champion.title }}</span>
+      <h1>{{ champion.name }}</h1>
+    </div>
+    <!-- <svg
+      class="border"
+      viewBox="0 0 530 716"
+      fill="none"
+      preserveAspectRatio="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect x="0.5" y="0.5" stroke="#B0B0B0" />
+    </svg> -->
+
+    <app-role-difficulty-section
+      [difficulty]="champion.info.difficulty"
+      [role]="champion.tags"
+    ></app-role-difficulty-section>
+    <div class="separator"></div>
+    <p class="lore">
+      {{ champion.lore }}
+    </p>
   </section>
 </div>
