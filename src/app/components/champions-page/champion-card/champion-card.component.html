@@ -1,4 +1,10 @@
-<a *ngIf="champion" [routerLink]="['/champion', champion.id]" class="card">
+<a
+  *ngIf="champion"
+  [routerLink]="['/champion', champion.id]"
+  class="card"
+  [@fadeIn]
+  [@fadeOut]
+>
   <div class="img-container">
     <img
       [src]="
